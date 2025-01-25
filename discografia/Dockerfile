@@ -3,8 +3,8 @@ FROM gradle:jdk21 as builder
 
 WORKDIR /app
 
-COPY build.gradle .
-COPY settings.gradle .
+COPY build.gradle settings.gradle gradlew gradlew.bat ./
+COPY gradle/ gradle/
 
 COPY src ./src
 
