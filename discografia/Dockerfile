@@ -3,10 +3,10 @@ FROM gradle:jdk21 as builder
 
 WORKDIR /app
 
-COPY ./discografia/build.gradle .
-COPY ./discografia/settings.gradle .
+COPY build.gradle .
+COPY settings.gradle .
 
-COPY ./discografia/src ./src
+COPY src ./src
 
 RUN gradlew build --no-daemon
 
