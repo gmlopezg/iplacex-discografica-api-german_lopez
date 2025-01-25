@@ -20,4 +20,4 @@ COPY --from=builder /app/build/libs/*.jar discografia-1.jar
 
 EXPOSE 443
 
-CMD ["java", "-jar", "discografia-1.jar"]
+CMD ["java", "-jar", "app.jar", "--server.port=${PORT}"]
