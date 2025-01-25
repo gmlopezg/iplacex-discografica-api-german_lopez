@@ -3,8 +3,8 @@ FROM gradle:jdk21 as builder
 
 WORKDIR /app
 
-COPY build.gradle settings.gradle ./
-COPY gradlew gradle/ ./
+COPY ./discografia/build.gradle .
+COPY ./discografia/settings.gradle .
 
 COPY ./discografia/src ./src
 
