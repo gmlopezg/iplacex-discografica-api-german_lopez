@@ -8,7 +8,7 @@ COPY settings.gradle .
 
 COPY src ./src
 
-RUN gradlew build --no-daemon
+RUN chmod +x gradlew && ./gradlew build --no-daemon
 
 # STAGE 2
 
