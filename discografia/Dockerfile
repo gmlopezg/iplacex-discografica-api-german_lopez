@@ -18,6 +18,6 @@ WORKDIR /app
 
 COPY --from=builder /app/build/libs/*.jar discografia-1.jar
 
-EXPOSE 8080
+EXPOSE 443 8080
 
 CMD ["java", "-jar", "discografia-1.jar", "--server.port=${PORT}"]
